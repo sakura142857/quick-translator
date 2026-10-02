@@ -1,0 +1,39 @@
+{
+  "name": "quick-translator",
+  "version": "1.3.1",
+  "description": "本地划词翻译小工具 —— 看视频、刷 GitHub 时随时唤起，翻译单词或句子",
+  "main": "main.js",
+  "author": "sakura",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<你的用户名>/quick-translator.git"
+  },
+  "build": {
+    "appId": "com.quicktranslator.app",
+    "productName": "快捷翻译",
+    "asar": true,
+    "compression": "maximum",
+    "afterPack": "scripts/after-pack.js",
+    "directories": { "output": "release" },
+    "files": [
+      "main.js", "preload.js", "src/**/*", "renderer/**/*", "assets/**/*", "scripts/ocr.ps1", "package.json"
+    ],
+    "asarUnpack": [
+      "scripts/ocr.ps1"
+    ],
+    "win": {
+      "target": ["portable"],
+      "icon": "assets/icon.ico",
+      "signExecutable": false,
+      "artifactName": "QuickTranslator-${version}-portable.exe"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0"
+  }
+}

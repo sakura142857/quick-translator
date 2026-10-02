@@ -1,0 +1,65 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+  cursor: crosshair;
+  user-select: none;
+  font-family: "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+}
+
+.dim {
+  position: fixed;
+  inset: 0;
+  background: rgba(12, 14, 24, .45);
+}
+
+/* outline 向外扩散，正好把选区之外全部压暗，选区内保持原样 */
+.selection {
+  position: fixed;
+  outline: 9999px solid rgba(12, 14, 24, .55);
+  border: 1px solid #7c8cff;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .55) inset;
+  pointer-events: none;
+}
+
+.badge {
+  position: fixed;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(18, 20, 34, .92);
+  color: #eef0ff;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.hint {
+  position: fixed;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: rgba(18, 20, 34, .88);
+  color: #e8eaff;
+  font-size: 13px;
+  letter-spacing: .2px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.hint .key {
+  display: inline-block;
+  padding: 1px 7px;
+  margin: 0 2px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .16);
+  font-weight: 500;
+}
+
+.hint .sep { margin: 0 6px; opacity: .5; }

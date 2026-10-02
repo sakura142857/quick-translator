@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self';" />
+<title>截图翻译</title>
+<link rel="stylesheet" href="capture.css" />
+</head>
+<body>
+  <div class="dim" id="dim"></div>
+  <div class="selection" id="selection" hidden></div>
+  <div class="badge" id="badge" hidden></div>
+  <div class="hint" id="hint">
+    <span class="key">拖动鼠标</span> 框选要翻译的区域
+    <span class="sep">·</span>
+    <span class="key">Esc</span> 或 右键 取消
+  </div>
+  <script src="capture.js"></script>
+</body>
+</html>

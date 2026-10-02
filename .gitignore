@@ -1,0 +1,29 @@
+# 依赖
+node_modules/
+
+# 构建产物
+dist/
+outputs/
+outputs-final/
+release/
+
+# 界面截图（由 scripts/screenshot.js 生成；README 引用的是 docs/screenshots/）
+preview/
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+npm-debug.log*
+
+# 本地配置与密钥（配置实际存在 %APPDATA%\quick-translator，这里只是兜底）
+config.json
+.env
+.env.*
+
+# 助手工作目录（含内部笔记，不对外发布）
+.workbuddy-ai/

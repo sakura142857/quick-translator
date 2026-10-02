@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self';" />
+<title>快捷翻译</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="popup-body">
+  <div class="shell">
+    <div class="card" id="card">
+
+      <header class="titlebar">
+        <div class="brand">
+          <img class="brand-logo" src="../assets/icon.png" alt="" />
+          <span class="brand-name">快捷翻译</span>
+          <span class="engine-pill" id="enginePill" title="点击切换引擎">免费接口</span>
+        </div>
+        <div class="win-actions">
+          <button class="icon-btn" id="btnSettings" title="设置">⚙</button>
+          <button class="icon-btn" id="btnClose" title="关闭 (Esc)">✕</button>
+        </div>
+      </header>
+
+      <div class="langbar">
+        <select id="selFrom" class="lang-select" title="源语言"></select>
+        <button class="swap-btn" id="btnSwap" title="互换语言">⇄</button>
+        <select id="selTo" class="lang-select" title="目标语言"></select>
+      </div>
+
+      <div class="content">
+        <div class="pane">
+          <div class="pane-head">
+            <span>原文</span>
+            <span class="pane-actions">
+              <button class="mini-btn" id="btnPaste" title="粘贴剪贴板">粘贴</button>
+              <button class="mini-btn" id="btnClear" title="清空原文和译文">清空</button>
+            </span>
+          </div>
+          <textarea id="source" class="source-input"
+                    placeholder="输入文字，或选中任意位置文字后按快捷键抓取…" spellcheck="false"></textarea>
+        </div>
+
+        <div class="pane result-pane">
+          <div class="pane-head">
+            <span>译文</span>
+            <span class="meta" id="meta"></span>
+          </div>
+          <div class="result" id="result">
+            <div class="placeholder">译文会显示在这里</div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="actionbar">
+        <button class="btn primary" id="btnTranslate">翻译</button>
+        <button class="btn" id="btnCapture" title="框选屏幕区域识别并翻译">截图</button>
+        <button class="btn" id="btnCopy">复制译文</button>
+        <button class="btn" id="btnSpeak" title="朗读译文">🔊</button>
+        <span class="spacer"></span>
+        <span class="hint" id="hint">Ctrl+Enter 翻译</span>
+      </footer>
+
+    </div>
+    <div class="resize-edge resize-n" data-edge="n"></div>
+    <div class="resize-edge resize-s" data-edge="s"></div>
+    <div class="resize-edge resize-e" data-edge="e"></div>
+    <div class="resize-edge resize-w" data-edge="w"></div>
+    <div class="resize-edge resize-ne" data-edge="ne"></div>
+    <div class="resize-edge resize-nw" data-edge="nw"></div>
+    <div class="resize-edge resize-se" data-edge="se" title="拖拽调整窗口大小"></div>
+    <div class="resize-edge resize-sw" data-edge="sw"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
