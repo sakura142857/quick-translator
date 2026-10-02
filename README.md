@@ -25,7 +25,7 @@
 ## 从源码运行
 
 ```bash
-git clone https://github.com/<你的用户名>/quick-translator.git
+git clone https://github.com/sakura142857/quick-translator.git
 cd quick-translator
 npm install
 npm start
